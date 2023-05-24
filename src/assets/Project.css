@@ -1,0 +1,14 @@
+.project-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .project-first-letter {
+    display: inline-block;
+  }
+  

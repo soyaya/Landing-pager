@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^5.1.0",
+    "@emailjs/browser": "^3.11.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.5.0",
     "dotenv": "^16.0.3",
+    "emailjs": "^4.0.2",
     "firebase": "^9.0.2",
     "framer-motion": "^10.12.12",
     "gh-pages": "^5.0.0",
@@ -20,9 +22,9 @@
     "sass": "^1.62.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://your-github-username.github.io/soyaya",
+  "homepage": "https://soyaya.github.io/Landing-page-",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

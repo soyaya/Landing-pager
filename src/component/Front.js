@@ -4,10 +4,12 @@ import { Carousel, Button, Space, Modal, Form, Input } from 'antd';
 import { Col, Row } from 'antd';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser';
 
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
+/*const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
@@ -15,10 +17,10 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
-};
+};*/
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+//firebase.initializeApp(firebaseConfig);
+//const db = firebase.firestore();
 
 const carouselStyle = {
   width: '100%',
@@ -51,7 +53,8 @@ const green = {
 function Front() {
   const [learnMoreModalVisible, setLearnMoreModalVisible] = useState(false);
   const [contactUsModalVisible, setContactUsModalVisible] = useState(false);
-  const [form] = Form.useForm();
+ // const [form] = Form.useForm();
+  const form = useRef()
 
   const handleLearnMoreClick = () => {
     setLearnMoreModalVisible(true);
@@ -66,7 +69,7 @@ function Front() {
     setContactUsModalVisible(false);
   };
 
-  const handleContactFormSubmit = async (values) => {
+ /* const handleContactFormSubmit = async (values) => {
     try {
       await db.collection('contacts').add({
         name: values.name,
@@ -86,7 +89,24 @@ function Front() {
       // Handle the error (e.g., display error message)
       console.error('Error submitting form:', error);
     }
-  };
+  };*/
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm('service_pq8chmg', 'template_tnhi1bw', form.current, '1ihNpjtRnrFnewOjto')
+      .then(
+        () => {
+          alert('Message successfully sent!')
+          window.location.reload(false)
+        },
+        () => {
+          alert('Failed to send the message, please try again')
+        }
+      )
+  }
+
 
   return (
     <section>
@@ -117,7 +137,7 @@ function Front() {
               <Button type="primary" className="glitter" onClick={handleLearnMoreClick}>
                 Learn More
               </Button>
-              <Button type="primary" className="glitter" onClick={handleContactUsClick}>
+              <Button type="primary"  className="glitter" onClick={handleContactUsClick}>
                 Contact Us
               </Button>
             </Space>
@@ -140,7 +160,7 @@ Proident commodo duis id voluptate commodo ea pariatur laboris sunt. Laborum in 
       <Modal visible={contactUsModalVisible} onCancel={handleModalClose} footer={null}>
         {/* Modal Content for Contact Us */}
         <h2>Contact Us Modal</h2>
-        <Form form={form} onFinish={handleContactFormSubmit}>
+        <Form ref={form} onSubmit={sendEmail}>
           <Form.Item
             name="name"
             label="Name"

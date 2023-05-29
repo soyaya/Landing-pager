@@ -22,14 +22,12 @@
     "sass": "^1.62.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://soyaya.github.io/Landing-page-",
+  
   "scripts": {
     "start": "PORT=3000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

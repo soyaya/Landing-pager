@@ -8,7 +8,7 @@ import { useRef } from 'react'
 import emailjs from '@emailjs/browser';
 
 
-{// Your web app's Firebase configuration
+// Your web app's Firebase configuration
 /*const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
@@ -21,7 +21,7 @@ import emailjs from '@emailjs/browser';
 
 //firebase.initializeApp(firebaseConfig);
 //const db = firebase.firestore();
-}
+
 const carouselStyle = {
   width: '100%',
   height: '100%',
@@ -69,7 +69,7 @@ function Front() {
     setContactUsModalVisible(false);
   };
 
- {/* const handleContactFormSubmit = async (values) => {
+ /* const handleContactFormSubmit = async (values) => {
     try {
       await db.collection('contacts').add({
         name: values.name,
@@ -89,7 +89,7 @@ function Front() {
       // Handle the error (e.g., display error message)
       console.error('Error submitting form:', error);
     }
-  };*/}
+  };*/
 
   const sendEmail = (e) => {
     e.preventDefault()

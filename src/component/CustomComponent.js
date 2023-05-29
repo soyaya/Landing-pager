@@ -37,7 +37,7 @@ const CustomComponent = () => {
         {isFlipped ? (
           <div style={{ padding: '16px' }}>
             <Title level={3} style={{ textAlign: 'center' }}>
-              //HOW WE HELP
+              HOW WE HELP
             </Title>
             <Paragraph style={{ textAlign: 'center' , color:'black',fontSize:'24PX'}}>
               mollit commodo est aute cupidatat. Culpa pariatur in mollit elit labore duis exercitation quis minim tempor nostrud. Consequat est consectetur pariatur esse dolore. Non cupidatat nulla cupidatat adipisicing culpa sint adipisicing. Deserunt ipsum veniam officia tempor sunt amet nostrud ipsum enim anim exercitation proident id. Occaecat labore consectetur amet occaecat quis dolore amet consequat cillum Lorem. Exercitation tempor magna cillum ut nostrud do mollit pariatur non.

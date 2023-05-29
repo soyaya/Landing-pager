@@ -24,7 +24,7 @@ const CustomComponent = () => {
           <div style={{ height: '400px' }}>
             <img
               src={rubImage}
-              alt="Rub Image"
+              alt="Rub Iage"
               style={{ width: '800px',maxWidth: '100%', height: '100%', objectFit: 'cover' }}
             />
           </div>
@@ -41,8 +41,6 @@ const CustomComponent = () => {
             </Title>
             <Paragraph style={{ textAlign: 'center' , color:'black',fontSize:'24PX'}}>
               mollit commodo est aute cupidatat. Culpa pariatur in mollit elit labore duis exercitation quis minim tempor nostrud. Consequat est consectetur pariatur esse dolore. Non cupidatat nulla cupidatat adipisicing culpa sint adipisicing. Deserunt ipsum veniam officia tempor sunt amet nostrud ipsum enim anim exercitation proident id. Occaecat labore consectetur amet occaecat quis dolore amet consequat cillum Lorem. Exercitation tempor magna cillum ut nostrud do mollit pariatur non.
-
- 
             </Paragraph>
             <AnimatedButton
               type="primary"

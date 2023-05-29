@@ -26,7 +26,7 @@ const Appdev = () => {
             <div style={{ height: '400px' }}>
             <img
               src={Pix}
-              alt="Rub Image"
+              alt="Rub Ime"
               style={{ width: '500px',maxWidth: '100%', height: '80%', objectFit: 'cover' }}
             />
           </div>

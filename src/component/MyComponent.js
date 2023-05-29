@@ -55,7 +55,7 @@ const MyComponent = () => {
         <div style={{ height: '600px' }}>
           <img
             src={Rub}
-            alt="Rub Image"
+            alt="Rub Iage"
             style={{ width: '600px', maxWidth: '100%', height: '80%', objectFit: 'cover' }}
           />
         </div>
